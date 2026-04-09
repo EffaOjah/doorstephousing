@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Figtree", sans-serif;
+  --color-brand-primary: #16292C;
+  --color-brand-accent: #FDE047;
+  --color-brand-surface: #EEF2F6;
+  --color-brand-teal: #0D9488;
+}
+
+@layer base {
+  body {
+    @apply text-slate-800 bg-white font-sans antialiased;
+  }
+}
+
+.framer-1EFVm .framer-styles-preset-qlvy3j:not(.rich-text-wrapper), .framer-1EFVm .framer-styles-preset-qlvy3j.rich-text-wrapper h1 {
+  --framer-font-family: "Figtree", "Figtree Placeholder", sans-serif;
+  --framer-font-family-bold: "Figtree", sans-serif;
+  --framer-font-family-bold-italic: "Figtree", sans-serif;
+  --framer-font-family-italic: "Figtree", "Figtree Placeholder", sans-serif;
+  --framer-font-open-type-features: normal;
+  --framer-font-size: 36px;
+  --framer-font-style: normal;
+  --framer-font-style-bold: normal;
+  --framer-font-style-bold-italic: italic;
+  --framer-font-style-italic: italic;
+  --framer-font-variation-axes: normal;
+  --framer-font-weight: 600;
+  --framer-font-weight-bold: 900;
+  --framer-font-weight-bold-italic: 900;
+  --framer-font-weight-italic: 600;
+  --framer-letter-spacing: -0.04em;
+  --framer-line-height: 1.05em;
+  --framer-paragraph-spacing: 40px;
+  --framer-text-alignment: start;
+  --framer-text-color: var(--token-bf5ff424-04d7-4913-a034-02ab08d24e7b, #000000);
+  --framer-text-decoration: none;
+  --framer-text-stroke-color: initial;
+  --framer-text-stroke-width: initial;
+  --framer-text-transform: none;
+}
