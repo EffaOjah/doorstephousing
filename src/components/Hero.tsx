@@ -1,35 +1,36 @@
 import { useState } from 'react';
 import { Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 1, 0.5, 1],
+    },
+  },
+};
 
 export default function Hero() {
   const [tab, setTab] = useState<'rent' | 'roommate'>('rent');
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 1, 0.5, 1],
-      },
-    },
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center bg-[#16292C] pt-32 lg:pt-40 pb-20">
+    <section className="relative min-h-screen flex items-center bg-[#16292C] pt-32 lg:pt-40 pb-20 overflow-hidden">
       {/* Background Image Overlay */}
       <div
         className="absolute inset-0 z-0 mix-blend-overlay opacity-40"
